@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+D:\ShoeRack\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+712124001.index
+3209228624.index
+818304142.index
+89060179.index
+3115909391.index
+487716333.index
+1949473168.index

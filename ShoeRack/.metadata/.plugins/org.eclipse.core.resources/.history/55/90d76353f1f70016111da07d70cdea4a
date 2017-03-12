@@ -1,0 +1,22 @@
+package com.ShoeRack.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ShoeRack.dao.ProductDao;
+import com.ShoeRack.model.Product;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+	@Autowired
+	private ProductDao productDao;
+	public ProductServiceImpl()
+	{
+		System.out.println("Creating instance for productservice");
+	}
+
+	
+}
+	

@@ -1,0 +1,5 @@
+package com.ShoeRack.dao;
+
+public interface CartDao {
+
+}
