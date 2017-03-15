@@ -6,8 +6,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+  
 </head>
 <body>
+<!--   Clear Cart  -->
 
+<!-- Check Out -->
+<div ng-app="app" ng-controller="ProductController">
+<div ng-init="getCart(${cartId})">
+<table class="table table-striped">
+<thead>
+<tr><th>Name</th><th>Quantity</th><th>Total Price</th>
+</tr>
+</thead>
+<tr ng-repeat="cartItem in cart.cartItems">
+<td>{{cartItem.product.name}}</td>
+<td>{{cartItem.quantity}}</td>
+<td>{{cartItem.totalPrice}}</td>
+<td>
+
+</table>
+</div>
+</div>
+
+<script src="<c:url value="/Resources/js/controller.js"></c:url>"></script>
 </body>
 </html>

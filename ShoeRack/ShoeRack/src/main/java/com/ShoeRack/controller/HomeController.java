@@ -31,6 +31,11 @@ public class HomeController {
 	{
 	return "About Us";
 	}
+	@RequestMapping("/all/product/home")
+	public String home1() 
+	{
+	return "home";
+	}
 	@RequestMapping("/ContactUs")
 	public String contactUs() 
 	{

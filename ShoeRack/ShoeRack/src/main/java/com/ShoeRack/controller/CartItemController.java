@@ -25,8 +25,10 @@ import com.ShoeRack.model.Product;
 		private CustomerService customerService;
 		@Autowired
 		private ProductService productService;
-	@RequestMapping("/addCartItem/{pid}")
-	public void addCartItem(@PathVariable(value="pid") int productId){
+	@RequestMapping("ShoeRack/cart/addCartItem/{pid}")
+	public void addCartItem(@PathVariable(value="pId") int productId){
+		
+		System.out.println("add cart method called");
 		User user=
 				(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		
@@ -36,8 +38,9 @@ import com.ShoeRack.model.Product;
 		List<CartItem> cartItems= cart.getCartItems();
 		
 		Product  product = productService.getProductById(productId);
-		
+		System.out.println("add cart method called in  mid");
 		for (int i = 0; i <cartItems.size(); i++) {
+			System.out.println("add cart method called in  for ");
 			CartItem cartItem=cartItems.get(i);
 			Product p=cartItem.getProduct();
 			     //1    ==  1
@@ -45,16 +48,17 @@ import com.ShoeRack.model.Product;
 				cartItem.setQuantity(cartItem.getQuantity() + 1);//increment the quantity
 				cartItem.setTotalPrice(cartItem.getQuantity() * p.getpPrice()); //update the total price
 				cartItemService.addCartItem(cartItem);//update the quantity in the cartitem
-				return;
+				//return;
 			}	
 		}
-		
+		System.out.println("add cart method called in  mid 22");
 		CartItem cartItem=new CartItem();
 		cartItem.setQuantity(1);
 		cartItem.setTotalPrice(cartItem.getQuantity() * product.getpPrice());
 		cartItem.setProduct(product); //set product id
 		cartItem.setCart(cart);//set cart id
 		cartItemService.addCartItem(cartItem); //insert query	
+		System.out.println("add cart method called at end");
 	}
 	}
 

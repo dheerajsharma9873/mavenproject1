@@ -44,7 +44,7 @@ $(document).ready(function(){
 					<td>${p.pDescription }</td>
 					<td>${p.category.categoryDetails}</td>
 					<td>
-					<c:url var="url" value="/all/product/viewproduct/${p.pId }"></c:url>
+					<c:url var="url" value="/all/product/viewProduct/${p.pId }"></c:url>
 					<a href="${url }"><span class="glyphicon glyphicon-info-sign"></span></a> 
 					<c:url var="delete" value="/admin/product/deleteproduct/${p.pId }"></c:url>
 					<a href="${delete }"><span class="glyphicon glyphicon-remove"></span></a>

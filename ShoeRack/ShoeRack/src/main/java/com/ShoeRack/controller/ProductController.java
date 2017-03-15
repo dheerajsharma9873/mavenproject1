@@ -74,12 +74,12 @@ public class ProductController {
 		model.addAttribute("categories",categoryService.getCategories());
 		return "productlist";
 	}
-	@RequestMapping("/all/product/viewproduct/{id}")
+	@RequestMapping("/all/product/viewProduct/{id}")
 	public String viewProduct(@PathVariable int id,Model model){
 		Product product=productService.getProductById(id);
 		model.addAttribute("product",product);
 		model.addAttribute("categories",categoryService.getCategories());
-		return "viewproduct";
+		return "viewProduct";
 	}
 
 	@RequestMapping("/admin/product/deleteproduct/{pId}")
