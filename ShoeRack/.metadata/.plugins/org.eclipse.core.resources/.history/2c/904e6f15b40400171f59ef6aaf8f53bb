@@ -1,5 +1,0 @@
-package com.ShoeRack.Service;
-
-public interface CartService {
-
-}

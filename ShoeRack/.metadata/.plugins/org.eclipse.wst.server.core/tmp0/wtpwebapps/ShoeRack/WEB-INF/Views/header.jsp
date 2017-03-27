@@ -85,22 +85,10 @@
           <span class="glyphicon glyphicon-shopping-cart" style="color:black;"></span></a></li>
              		</ul>
              		</div>
-               <c:if test="${pageContext.request.userPrincipal.name ==null }">
-			<li><a href="<c:url value="/login"></c:url>">Login</a></li>
-			<li> <a href="<c:url value="/all/registrationForm"></c:url>">Register</a></li>
-			</c:if>
-			
-			<c:if test="${pageContext.request.userPrincipal.name !=null }">
-			<li><a href="<c:url value="/j_spring_security_logout"></c:url>">logout</a></li>
-			</c:if>
-			
-               
-             
-         		   <c:url var="url" value="/admin/product/productform"></c:url>
+         <c:url var="url" value="/admin/product/productform"></c:url>
 
 <c:if test="${pageContext.request.userPrincipal.name !=null }">
    <!-- http://localhost:8080/project1/admin/product/productform -->
-   "src/main/webapp/WEB-INF/Views/header.jsp"
    <security:authorize access="hasRole('ROLE_ADMIN')">
    <li><a href="${url }">Add New Product</a></li>
    </security:authorize>
@@ -123,15 +111,13 @@
 </c:if>			
 			<c:if test="${pageContext.request.userPrincipal.name ==null }">
 			<li><a href="<c:url value="/login"></c:url>">Login</a></li>
-			<li> <a href="<c:url value="/all/registrationForm"></c:url>">Register</a></li>
+			<li> <a href="<c:url value="/register"></c:url>">Register</a></li>
 			</c:if>
 			
-
 			<c:if test="${pageContext.request.userPrincipal.name !=null }">
 			<li><a href="<c:url value="/j_spring_security_logout"></c:url>">logout</a></li>
 			</c:if>
-					
-
+	
  </div> 
 </nav>
 </body>

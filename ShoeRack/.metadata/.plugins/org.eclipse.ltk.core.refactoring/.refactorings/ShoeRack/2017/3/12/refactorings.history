@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ShoeRack/src/main/webapp/WEB-INF/flows/checkout/NewFile.xml&apos; to &apos;checkout-flow.xml&apos;" description="Rename resource &apos;NewFile.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/flows/checkout/NewFile.xml" name="checkout-flow.xml" stamp="1490080375248" updateReferences="true"/>
+</session>

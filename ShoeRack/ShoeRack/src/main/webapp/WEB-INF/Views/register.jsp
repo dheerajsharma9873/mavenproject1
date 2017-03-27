@@ -14,11 +14,7 @@
 </head>
 <body style="background-color:#EEEEEE;">
 		<div style="margin-top:20px;margin-left:50px;" class="container">
-  <div  class="col-lg-12 well">	<div class="panel-heading">
-	               <div class="panel-title text-center">
-	               		<img width="40%" class="img-responsive" src ="Resources/images/register_here.png"></img>
-	                	</div>
-	            </div> 
+  
 				
 	<div class="row">
 				<c:url var="url" value="/registerCustomer"></c:url>
@@ -155,6 +151,6 @@
 				</form:form>
 				</div>
 	</div>
-	</div>
+	
 </body>
 </html>

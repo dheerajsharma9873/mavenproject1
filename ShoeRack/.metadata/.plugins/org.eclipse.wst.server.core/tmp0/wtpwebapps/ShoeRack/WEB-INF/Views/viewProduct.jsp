@@ -10,7 +10,8 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-  
+<script src="<c:url value="/Resources/js/controller.js"></c:url>"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
@@ -50,7 +51,6 @@
 		</table>
 
 	</div>
-	<script src="<c:url value="/Resources/js/controller.js"></c:url>"></script>
-
+	
 </body>
 </html>

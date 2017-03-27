@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;collectCustomerInfo.jsp, collectShippingDetail.jsp, invalidCartWarning.jsp, orderConfirmation.jsp, thankCustomer.jsp&apos; to &apos;checkout&apos;" description="Move 5 resources to &apos;checkout&apos;" destination="src/main/webapp/WEB-INF/flows/checkout" element1="src/main/webapp/WEB-INF/flows/collectCustomerInfo.jsp" element2="src/main/webapp/WEB-INF/flows/collectShippingDetail.jsp" element3="src/main/webapp/WEB-INF/flows/invalidCartWarning.jsp" element4="src/main/webapp/WEB-INF/flows/orderConfirmation.jsp" element5="src/main/webapp/WEB-INF/flows/thankCustomer.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="5" stamp="1490592638685" updateReferences="true"/>
+</session>

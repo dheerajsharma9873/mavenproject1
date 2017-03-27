@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ShoeRack.Service.CartService;
 import com.ShoeRack.Service.CustomerService;
+import com.ShoeRack.dao.CartDao;
+import com.ShoeRack.dao.CustomerDao;
+import com.ShoeRack.dao.CustomerOrderDao;
 import com.ShoeRack.model.Cart;
 import com.ShoeRack.model.Customer;
 
@@ -20,6 +23,12 @@ public class CartController {
 		private CustomerService customerService;
 	 @Autowired
 	 private CartService cartService;
+	 @Autowired
+	 private	 CartDao cartDao;
+	  @Autowired
+	 private	CustomerOrderDao customerOrderDao;
+	  @Autowired
+	  private	CustomerDao customerDao;
 
 		@RequestMapping("/cart/getCartId")
 	public String getCartId(Model model){

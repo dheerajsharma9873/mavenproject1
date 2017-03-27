@@ -36,6 +36,7 @@
                <value>com.ShoeRack.model.Users </value>
                <value>com.ShoeRack.model.Cart</value>
                 <value>com.ShoeRack.model.CartItem</value>
+                <value>com.ShoeRack.model.CustomerOrder</value>
                 <value>com.ShoeRack.model.ShippingAddress</value>
                
  </list>
@@ -49,6 +50,7 @@
  <security:intercept-url pattern="/login" access="permitAll"/>
  <security:intercept-url pattern="/all/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
  <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+  <security:intercept-url pattern="/cart/**" access="hasRole('ROLE_USER')"/>
 
 
  <security:form-login login-page="/login" 
@@ -70,6 +72,20 @@
 
  </security:authentication-provider>
  </security:authentication-manager>
+ <webflow-config:flow-executor id="flowExecutor" flow-registry="flowRegistry" />
+
+ <webflow-config:flow-registry id="flowRegistry" base-path="/WEB-INF/flows">
+ <webflow-config:flow-location path="/checkout/checkout-flow.xml" id="checkout" />
+ </webflow-config:flow-registry>
+
+ <bean id="flowHandlerMapping" class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+ <property name="flowRegistry" ref="flowRegistry" />
+ </bean>
+
+ <bean id="flowHandlerAdapter" class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+ <property name="flowExecutor" ref="flowExecutor" />
+ </bean>
+    
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
